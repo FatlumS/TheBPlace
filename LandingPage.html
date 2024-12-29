@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheBPlace</title>
+
+    <!-- Google Fonts for Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<link rel="stylesheet" href="footer.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #000000,darkblue);
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            padding-left: 40px;
+            font-size: 3em;
+            color: white;
+            text-decoration: none;
+            user-select: none;
+            margin-right: auto;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-left: auto;
+        }
+
+        .navigation a {
+            font-size: 1.1em;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .waitlist {
+            padding: 8px 16px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            transition: background-color 0.2s ease;
+        }
+
+        .waitlist:hover {
+            background-color: rgb(18, 16, 16);
+        }
+
+        /* Main Text Section */
+        .TekstiNeMes {
+    position: relative;
+    top: 130px;
+    padding-left: 80px;
+    font-size: 3em;
+    color: white;
+    margin-top: 100px; /* For spacing from fixed header */
+    text-align: left;
+    width: 100%;
+    
+}
+
+
+
+        .TekstiNeMes h1:nth-child(1) {
+            color: white;
+        }
+
+        .TekstiNeMes h1:nth-child(2) {
+            color: #0205D3;
+        }
+
+        /* Services Section */
+     /* Initially hide the services container */
+.services-container {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Apply transition */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Apply animation when the class is added */
+.animate-in {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+}
+
+
+.service-card {
+    width: 30%; /* Make each card take up 30% of the container width for 3 cards in a row */
+    margin: 20px 0; /* Adjusted margin for spacing */
+    padding: 3rem 30px; /* Increased padding for bigger cards */
+    text-align: center;
+    border-radius: 10px;
+    border-width: 30px;
+    
+    background-color:black;
+    color:orangered;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    font-size: 1.2em;
+}
+
+.service-card:hover {
+    box-shadow: 0 0 20px orange;
+    transform: scale(1.1); /* Slightly bigger on hover */
+}
+
+/* Adjust specific cards to ensure even spacing in second row */
+.services-container > .service-card:nth-child(5),
+.services-container > .service-card:nth-child(4) {
+    width: ; /* Make the second-row cards slightly wider */
+    margin-left: 0; /* Remove left margin to ensure even spacing */
+    margin-right: 0; /* Ensure no extra space on the right */
+}
+
+
+
+
+
+        .icon-container {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Adjustments */
+       
+
+       /* Initially hide the container */
+.container {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Apply transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+/* Apply animation when the class is added */
+.animate-in {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+}
+
+
+.centered-div {
+    background: transparent;
+    ;
+    padding: 20px;
+    height: 400px;
+    width: 1200px;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+
+
+#tekst{
+margin-bottom: -20px;
+font-size: 6em;
+color:white;
+
+}
+#tekst2{
+    margin-bottom: 50px; 
+    font-size: 6em;
+    color: white;
+    
+    
+    }
+    
+
+    #butoni{
+        text-align: center;
+        margin-top: -20px;
+
+       
+            background-color: black; /* Green background */
+            color: white; /* White text */
+            font-size: 16px; /* Text size */
+            padding: 15px 110px; /* Padding for top-bottom and left-right */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer when hovering */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+
+           
+          }
+        
+          #butoni:hover {
+            background-color: rgb(18, 16, 16); /* Darker green on hover */
+          }
+        
+          #butoni:focus {
+            outline: none; /* Remove focus outline */
+          }
+        
+          #butoni:active {
+            background-color: #3e8e41; /* Even darker green when clicked */
+          }
+          @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) translateX(0); /* Start slightly below and at the original X position */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) translateX(20px); /* End in the original position with a shift to the right */
+            }
+        }
+
+
+        canvas {
+            max-width: 500px; /* Increased size for a larger chart */
+            margin: 0 auto;
+            position: relative;
+            top: 140px;
+            right: 40px;
+          
+        }
+        .charti {
+    width: 1350px;
+    height: 700px;
+    position: relative;
+    left: 140px;
+    border-radius: 30px;
+    opacity: 0; /* Start invisible */
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* Smooth animation */
+}
+
+.charti.animate-in {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Slide into place */
+}
+
+#Tc {
+    position: relative;
+    bottom: 460px;
+    color: white;
+    font-size: 2.1em;
+    right: 40px;
+    text-align: center; /* Uncomment this to center the text */
+    display: block; /* Use block instead of flex */
+}
+
+
+
+
+    @media (max-width: 600px) {
+
+        .navigation {
+            display: none;
+        }
+        .logo {
+           position: relative;
+            padding: 20px;
+            right:30px;
+        }
+
+       
+
+        .button-container {
+            gap: 10px;
+        }
+
+        .TekstiNeMes {
+            position: relative;
+            top: 80px;
+            font-size: 1.5em;
+            padding-left: 20px;
+            width: 100%;
+        }
+        .our {
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+
+
+
+        .services-container {
+            flex-direction: column;
+            position: relative;
+            bottom: 10px;
+            left: 20px;
+        }
+        .centered-div{
+            width: 90%;
+            position: relative;
+            left: 20px;
+
+
+        }
+        #tekst{
+            font-size: 2.5em;
+            position: relative;
+            word-wrap: break-word;
+        }
+        #tekst2{
+            font-size: 2.5em;
+            word-wrap: break-word;
+        }
+
+        .service-card {
+            width: 100%; /* Full width on smaller screens */
+        }
+    }
+
+    .highlight {
+    color: #0205D3;
+}
+
+
+    #contact {
+    position: relative;
+    
+    text-decoration: none; /* Remove default underline */
+}
+
+#contact::after {
+    content: ""; /* Creates the underline */
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Position it just below the text */
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: blue; /* Color of the underline */
+    transition: width 0.3s ease-in-out; /* Smooth left-to-right animation */
+}
+
+#contact:hover::after {
+    width: 100%; /* Expand underline to full width on hover */
+}
+#About{
+    position: relative;
+    text-decoration: none;
+}
+#About::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: black;
+    transition: width 0.3s ease-in-out;
+}
+#About:hover::after{
+    width: 100%;
+}
+
+
+
+
+
+
+    
+    </style>
+</head>
+<body style="background-color: black;">
+    <!-- Header Section -->
+    <header>
+        <a href="#" class="logo" style=" text-decoration: none;">
+            <span style="color: blue;">The</span><span style="color: white;">BPlace</span>
+          </a>
+          
+        <nav class="navigation">
+            <!-- <a href="index2.html" id="contact">Contact</a> -->
+            <a href="AboutUs.html" id="About">About Us</a>
+            <div class="button-container">
+                <!-- <button class="login-button" onclick="openLoginPopup()">Sign Up</button> -->
+                <button onclick="location.href='Waitlist.html'" class="waitlist">Join Waitlist</button>
+            </div>
+
+            
+        </nav>
+    </header>
+
+    <!-- Main Text Section -->
+    <div class="TekstiNeMes">
+        <h1>Unlock New Opportunities</h1>
+        <h1>All-in-One Platform</h1>
+    </div>
+
+    <!-- Services Section -->
+    <div class="our">
+        <h1 style="text-align: center; color: rgb(255, 255, 255); margin-top: 330px; text-decoration: underline; text-decoration-color: orangered; text-underline-offset: 15px; 
+            text-decoration-thickness: 5px; font-size: 3em;">Our Services</h1>
+      </div>
+      
+      
+    <div class="services-container">
+        <div class="service-card">
+            <div class="icon-container"><i class="fas fa-shopping-cart"></i></div>
+            <h3>Marketplace Functionality</h3>
+            <p style="color: white; margin-top: 20px; font-size: 1.2em; font-weight: bold;">Buy and sell a wide variety of products easily and securely through our platform, unlocking new opportunities for growth</p>
+        </div>
+        <div class="service-card">
+            <div class="icon-container"><i class="fas fa-calendar-alt"></i></div>
+            <h3>Booking Capabilities</h3>
+            <p style="color: white; margin-top: 20px; font-size: 1.2em; font-weight: bold;">Easily book services and places through our platform, streamlining your reservation process for convenience and efficiency.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon-container"><i class="fas fa-briefcase"></i></div>
+            <h3>Job Postings</h3>
+            <p style="color: white; margin-top: 20px; font-size: 1.2em; font-weight: bold;">Post job opportunities and get hired, connecting businesses with talent and helping job seekers find their next career move.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon-container"><i class="fas fa-globe"></i></div>
+            <h3>Collaboration Hub</h3>
+            <p style="color: white; margin-top: 20px; font-size: 1.2em; font-weight: bold;"> Join together in one central location, where businesses and individuals can connect, collaborate, and grow.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon-container"><i class="fas fa-cogs"></i></div>
+            <h3>Freelancers & Contractors</h3>
+            <p style="color: white; margin-top: 20px; font-size: 1.2em; font-weight: bold;">Hire freelancers or become one, offering opportunities to work independently or find the right talent for your business.</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+
+        <div class="centered-div"><h1 id="tekst">Join the future of online
+            </h1>
+            
+            <h1 id="tekst2"> business in <span style="color: #0205D3;">The</span><span style="color: white;">BPlace</span></h1>
+        
+            <button id="butoni" class="login-button" onclick="window.location.href='Waitlist.html'">Join Waitlist</button>
+
+    
+    </div> 
+            
+
+            
+    </div>
+
+    <div class="charti"><canvas id="surveyChart" width="500" height="500"></canvas> <!-- Increased dimensions -->
+    
+        <h2 id="Tc">We asked 250 businesses if <span class="highlight"> The</span>BPlace is easier than using multiple platforms</h2>
+
+    </div>
+
+    <footer>
+      <div class="content">
+        <div class="top">
+          <div class="logo-details">
+            <!-- <i class="fab fa-slack"></i> -->
+            <span class="logo_name"> <span style="color: #0205D3;">The</span>BPlace</span>
+          </div>
+          <!-- <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div> -->
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Company</li>
+            <li><a href="#">Home</a></li>
+            <!-- <li><a href="index2.html">Contact us</a></li> -->
+            <li><a href="AboutUs.html">About us</a></li>
+            <li><a href="Waitlist.html">Get started</a></li>
+          </ul>
+      
+         
+         
+          <!-- <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email"></li>
+            <li><input type="button" value="Subscribe"></li> -->
+          <!-- </ul> -->
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text">Copyright © 2024 <a href="#">TheBPlace.</a>All rights reserved</span>
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+       
+document.addEventListener("DOMContentLoaded", function () {
+    const observeElement = (selector) => {
+        const element = document.querySelector(selector);
+        if (element) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target); // Stop observing after animation triggers
+                    }
+                });
+            }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+
+            observer.observe(element);
+        }
+    };
+
+    observeElement('.container'); // Observe .container
+    observeElement('.services-container'); // Observe .services-container
+    observeElement('.charti'); // Observe .charti (Your chart container)
+    observeElement('.our'); // Observe the '.our' clas
+});
+
+
+
+    const data = {
+            labels: ['Yes (98%)', 'No (2%)'],
+            datasets: [{
+                label: 'Survey Results',
+                data: [98, 2],
+                backgroundColor: [
+                '#0205D3', // kalter
+                '#000000'   // zi
+                ],
+                borderColor: [
+                    '#000000', 
+                    '#0205D3'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Configuration for the chart
+        const config = {
+            type: 'pie', // You can change this to 'doughnut' for a different style
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                }
+            }
+        };
+
+        // Render the chart
+        const ctx = document.getElementById('surveyChart').getContext('2d');
+        new Chart(ctx, config);
+
+        
+
+
+    </script>
+
+
+
+<!-- <div id="loginPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button" onclick="closeLoginPopup()">&times;</span>
+        <h2>Create an account</h2>
+        <div class="butonatNePopup1">
+            <button onclick="location.href='signup-PA.html'">Personal account</button>
+            <button class="business-button" onclick="openBusinessPopup()">Business account</button>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div id="businessPopup" class="popup-business">
+    <div class="popup-business-content">
+        <span class="close-business-button" onclick="closeBusinessPopup()">&times;</span>
+        <h2>Business Account</h2>
+        <div class="butonatNePopupBusiness">
+            <button onclick="location.href='signup-SB.html'" >Service business Account</button>
+            <button onclick="location.href='signup-MB.html'" >Manufacturing business Account</button>
+        </div>
+    </div>
+</div> -->
+  
+
+
+    
+   
+</body>
+</html>
