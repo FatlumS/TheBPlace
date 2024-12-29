@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/collection/components/icon/icon.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        }
+
+        body {
+           background-color: black;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            padding-left: 40px;
+            font-size: 3em;
+            color: white;
+            text-decoration: none;
+            user-select: none;
+            margin-right: auto;
+        }
+
+        #About, #WhatWeDo, #OurMission {
+            font-size: 5em;
+            color: #0205D3;
+            text-align: center; /* Centers the text */
+            margin-top: 150px; /* Moves it down */
+            position: relative; /* For the pseudo-element positioning */
+        }
+
+        /* Underline effect for all sections */
+        #About::after, #WhatWeDo::after, #OurMission::after {
+            content: "";
+            display: block;
+            width: 23%; /* Adjust the width here to control the underline length */
+            height: 3px; /* Thickness of the underline */
+            background-color: #0205D3; /* Color of the underline */
+            margin: 10px auto 0; /* Centers the underline below the text */
+        }
+
+        /* Animation definition */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) translateX(0); /* Start slightly below and at the original X position */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) translateX(20px); /* End in the original position with a shift to the right */
+            }
+        }
+
+        /* Apply the animation */
+        .teksti1 p, .teksti2 p, .teksti3 p {
+    left: 440px; /* Adjusted to move text a little left */
+    animation: fadeInUp 2s ease-in-out forwards;
+    opacity: 0;
+    font-size: 1.4em;
+    line-height: 1.6;
+    max-width: 95%;
+    margin: 20px auto;
+    color: white;
+    font-weight: 100;
+    padding: 0 20px;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+        .teksti3 {
+            margin-top: 50px;
+        }
+
+        .footer p {
+           display: flex;
+           justify-content: center;
+
+            color: white;
+            font-size: 0.9em;
+            margin-top: 100px;
+            font-size: 14px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <a href="LandingPage.html" class="logo" style=" text-decoration: none;">
+            <span style="color: blue;">The</span><span style="color: white;">BPlace</span>
+          </a>
+    </header>
+
+    <h1 id="About">About Us</h1>
+
+    <div class="teksti1">
+        <p>
+        TheBPlace is an all-in-one platform where you can create your online business space to sell, buy, rent, or hire. Whether you're a business or an individual, TheBPlace offers a seamless experience for all your needs. From posting job opportunities to showcasing products and services, we make it easy for everyone to connect and grow.
+        </p>
+    </div>
+
+    <h1 id="WhatWeDo">What We Do?</h1>
+
+    <div class="teksti2">
+        <p>
+            At TheBPlace, we help you build a powerful online presence to showcase your business.Create your unique space where customers can discover what you offer and engage directly with your business. With customizable listings, secure payments, and seamless interactions, TheBPlace gives you the tools to succeed. Start building your online business place today and unlock new opportunities.
+        </p>
+       
+
+    <h1 id="OurMission">Our Mission</h1>
+
+    <div class="teksti3">
+        <p>
+            Our mission at TheBPlace is to bring everything businesses need into a single platform. We aim to replace the multiple tools and services that businesses currently rely on, offering everything from marketing and hiring to product listings and payments. By combining all essential business functions in one place, we simplify workflows and help businesses operate more efficiently.TheBPlace empowers businesses to focus on growth without switching between different platforms. Our goal is to make business management easier, smarter, and ultimately, we want to become the mini Google for businesses.
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 <span style="color: #0205D3;">The</span>bPlace. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
