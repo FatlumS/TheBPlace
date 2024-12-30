@@ -89,6 +89,9 @@
     margin-top: 100px; /* For spacing from fixed header */
     text-align: left;
     width: 100%;
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Apply transition */
     
 }
 
@@ -101,6 +104,18 @@
         .TekstiNeMes h1:nth-child(2) {
             color: #0205D3;
         }
+
+        .our {
+    position: relative;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Apply transition */
+  
+}
 
         /* Services Section */
      /* Initially hide the services container */
@@ -553,7 +568,8 @@ document.addEventListener("DOMContentLoaded", function () {
     observeElement('.container'); // Observe .container
     observeElement('.services-container'); // Observe .services-container
     observeElement('.charti'); // Observe .charti (Your chart container)
-    observeElement('.our'); // Observe the '.our' clas
+    observeElement('.our');
+    observeElement('.TekstiNeMes'); 
 });
 
 
