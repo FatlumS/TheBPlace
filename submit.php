@@ -1,14 +1,11 @@
-<?php
-// Database connection settings
-$host = 'localhost';   // Your host (e.g., 'localhost' or the host from Render)
-$db = 'waitlist';    // Your database name
-$user = 'postgres';     // Your PostgreSQL username
-$pass = 'Glowproduction1$$'; // Your PostgreSQL password
-$port = '5432';         // Default PostgreSQL port
+// Database connection settings using Render's connection string
+$dsn = 'pgsql:host=dpg-ctuimai3esus739crmv0-a.frankfurt-postgres.render.com;dbname=thebplace_8pv8;port=5432';
+$user = 'fatlums';   // Username
+$pass = 'RGiTja1ED5rQIrAg9rArqpxoAUqlQdPU';  // Password
 
 // Connect to the database
 try {
-    $pdo = new PDO("pgsql:host=$host;dbname=$db;port=$port", $user, $pass);
+    $pdo = new PDO($dsn, $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -30,4 +27,3 @@ try {
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
-?>
