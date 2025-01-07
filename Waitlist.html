@@ -143,13 +143,9 @@
         
         <div class="form-container">
             <h2>Get Notified First!</h2>
-           <form action="index.html" method="post">
-    <!-- Full Name input -->
+      <form id="waitlist-form">
     <input type="text" placeholder="Full name" name="full_name" required>
-
-    <!-- Email input -->
     <input type="email" placeholder="Email" name="email" required>
-
     <button type="submit">Join the Waitlist</button>
 </form>
 
@@ -159,6 +155,19 @@
             <p>&copy; 2024 <span style="color: #0205D3;">The</span>BPlace. All rights reserved.</p>
         </div>
     </div>
+
+
+
+    <script>
+    document.getElementById('waitlist-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from refreshing the page
+        const fullName = event.target.full_name.value;
+        const email = event.target.email.value;
+
+        alert(`Thank you, ${fullName}! We’ll notify you at ${email}.`);
+        // Optionally, you can save the data to localStorage or display it on the page.
+    });
+</script>
 
 </body>
 </html>
