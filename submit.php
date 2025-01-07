@@ -31,7 +31,7 @@ try {
     }
 } catch (PDOException $e) {
     // Log the error and show a generic error message
-    error_log($e->getMessage());
+    error_log($e->getMessage(), 3, '/path/to/your/logfile.log'); // Make sure this path is correct and writable
     echo "There was an error processing your request. Please try again later.";
 }
 ?>
