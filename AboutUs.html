@@ -102,12 +102,50 @@
             margin-top: 100px;
             font-size: 14px; /* Adjust as needed */
         }
+
+        @media (max-width: 480px){
+            body, html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden; /* Shmang lëvizjen horizontale */
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .logo{
+
+position: relative;
+right: 50px;
+}
+.teksti1, .teksti2,.teksti3{
+    position: relative;
+    right: 20px;
+}
+    .teksti1 p, .teksti2 p, .teksti3 p{
+        font-size: 1.0em;
+        word-spacing: 0;
+    }
+
+        }
+
+        @media (max-width: 769px){
+            .logo{
+
+position: relative;
+right: 50px;
+}.teksti1, .teksti2,.teksti3{
+    position: relative;
+    right: 20px;
+}
+    
+        }
     </style>
 </head>
 <body>
     
     <header>
-        <a href="index.html" class="logo" style=" text-decoration: none;">
+        <a href="LandingPage.html" class="logo" style=" text-decoration: none;">
             <span style="color: blue;">The</span><span style="color: white;">BPlace</span>
           </a>
     </header>
