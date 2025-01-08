@@ -384,31 +384,38 @@ color:white;
 
 
 .services-container {
-        flex-direction: column; /* Stack cards vertically */
-        gap: 15px; /* Reduce gap for smaller screens */
-        transition: none; /* Disable transitions */
-        animation: none; /* Disable animations */
+    display: flex; /* Bën të mundur përdorimin e flexbox */
+    flex-direction: row; /* Shfaq kartat në një rresht */
+    flex-wrap: wrap; /* Siguron që kartat që nuk futen në rreshtin aktual të kalojnë në një të ri */
+    gap: 30px; /* Hapësirë midis kartave */
+    justify-content: center; /* Qendron të gjitha kartat në rresht */
+    align-items: center; /* Qendron vertikalisht kartat */
+    padding: 10px; /* Hapësirë rreth përmbajtjes */
+}
 
-    }
+.service-card {
+    flex: 1 1 calc(100% - 80px); /* Përshkruan që karta të zërë 100% të gjerësisë minus hapësirën e `gap` */
+    max-width: 350px; /* Kufizon gjerësinë maksimale të kartës */
+    margin: 0 auto; /* Qendron kartën horizontalisht */
+    padding: 15px; /* Hapësirë brenda kartës */
+    border-radius: 8px; /* Këndet e rrumbullakosura */
+    overflow: hidden; /* Parandalon që përmbajtja të tejkalojë kufijtë */
+}
+.service-card h3 {
+    font-size: 1.4em; /* Titull i përshtatshëm për ekranet më të vogla */
+    margin-bottom: 10px;
+}
 
-    .service-card {
-        width: 400px; /* Take almost full width of the screen */
-        margin: 0 auto; /* Center the card */
-        transition: none; /* Disable transitions */
-        animation: none; /* Disable animations */
-    }
+.service-card p {
+    font-size: 1.0em !important; /* Madhësia e tekstit më e vogël dhe e detyrueshme */
+    margin-bottom: 5px;
+    color: #333; /* Mund të shtoni ngjyrë nëse është e nevojshme */
+}
 
-    .service-card h3 {
-        font-size: 1.2em; /* Smaller title */
-    }
-
-    .service-card p {
-        font-size: 0.9em; /* Smaller text for readability */
-    }
-
-    .icon-container {
-        font-size: 2em; /* Smaller icons */
-    }
+.icon-container {
+    font-size: 1.5em; /* Madhësi më e vogël për ikonat */
+    margin-bottom: 10px;
+}
 
     .centered-div {
         text-align: center;
@@ -443,16 +450,16 @@ color:white;
     padding: 10px; /* Hapësirë rreth përmbajtjes */
     width: 100%; /* Merr gjerësinë e plotë të prindit */
     height: auto; /* Lartësi dinamike bazuar në përmbajtjen */
+    margin-left: -90px; /* Shtyrje në të majtë për të lëvizur të gjithë blokun */
 }
 
 #surveyChart {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
+    margin-top: 100px; /* Hapësirë më e madhe në krye për ta shtyrë grafikun më poshtë */
+    margin-bottom: 20px; /* Hapësirë midis grafikut dhe tekstit */
     transition: none;
     animation: none;
-    margin-bottom: 20px; /* Hapësirë midis grafikut dhe tekstit */
-    position: relative;
-    right: 150px;
 }
 
 #Tc {
@@ -462,9 +469,7 @@ color:white;
     max-width: 600px; /* Kufizo shtrirjen e tekstit */
     text-align: center; /* Qendër për tekstin */
     margin: 0 auto; /* Pozicionim në qendër horizontalisht */
-    position: relative;
-    right: 150px;
-    bottom: 370px;
+    /* Heqim 'position', 'right', dhe 'bottom' për pozicionim të drejtpërdrejtë */
 }
 
 
