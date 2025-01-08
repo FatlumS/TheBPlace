@@ -302,70 +302,10 @@ color:white;
 
 
 
-    @media (max-width: 600px) {
-
-        .navigation {
-            display: none;
-        }
-        .logo {
-           position: relative;
-            padding: 20px;
-            right:30px;
-        }
-
-       
-
-        .button-container {
-            gap: 10px;
-        }
-
-        .TekstiNeMes {
-            position: relative;
-            top: 80px;
-            font-size: 1.5em;
-            padding-left: 20px;
-            width: 100%;
-        }
-        .our {
-    position: relative;
-    bottom: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-}
 
 
 
-
-
-        .services-container {
-            flex-direction: column;
-            position: relative;
-            bottom: 10px;
-            left: 20px;
-        }
-        .centered-div{
-            width: 90%;
-            position: relative;
-            left: 20px;
-
-
-        }
-        #tekst{
-            font-size: 2.5em;
-            position: relative;
-            word-wrap: break-word;
-        }
-        #tekst2{
-            font-size: 2.5em;
-            word-wrap: break-word;
-        }
-
-        .service-card {
-            width: 100%; /* Full width on smaller screens */
-        }
-    }
+    
 
     .highlight {
     color: #0205D3;
@@ -410,7 +350,131 @@ color:white;
     width: 100%;
 }
 
+@media (max-width: 480px){
 
+    body, html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden; /* Shmang lëvizjen horizontale */
+        margin: 0;
+        padding: 0;
+        
+    }
+    .navigation{
+        display: none;
+    }
+.logo{
+
+    position: relative;
+    right: 50px;
+}
+
+.TekstiNeMes {
+    font-size: 1.6em;
+    position: relative;
+    right: 40px;
+    text-align: center; /* Teksti në qendër */
+    margin: 0 auto; /* Hiq margjinat e tepërta */
+}
+
+.our{
+    font-size: 0.7em;
+    text-decoration: none;
+}
+
+
+.services-container {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 15px; /* Reduce gap for smaller screens */
+        transition: none; /* Disable transitions */
+        animation: none; /* Disable animations */
+
+    }
+
+    .service-card {
+        width: 400px; /* Take almost full width of the screen */
+        margin: 0 auto; /* Center the card */
+        transition: none; /* Disable transitions */
+        animation: none; /* Disable animations */
+    }
+
+    .service-card h3 {
+        font-size: 1.2em; /* Smaller title */
+    }
+
+    .service-card p {
+        font-size: 0.9em; /* Smaller text for readability */
+    }
+
+    .icon-container {
+        font-size: 2em; /* Smaller icons */
+    }
+
+    .centered-div {
+        text-align: center;
+        padding: 10px;
+    }
+
+    #tekst {
+    font-size: 2em; /* Zvogëloje fontin për të bërë më të ngjeshur tekstin */
+    margin-bottom: 10px;
+    line-height: 1.2; /* Redukto lartësinë e linjave për të ngjeshur më shumë tekstin */
+}
+
+#tekst2 {
+    font-size: 2em; /* Zvogëloje fontin për të pasur më shumë hapësirë horizontale */
+    line-height: 1.4; /* Po ndryshohet lartësia e linjave për të ngjeshur tekstin */
+}
+
+#tekst2 span {
+    font-size: 1.2em; /* Zvogëloje fontin të span për t'u siguruar që mbetet kompakt */
+}
+
+    #butoni {
+        font-size: 0.9em; /* Reduce button font size */
+        padding: 8px 30px; /* Adjust button padding */
+    }
+
+    .charti {
+    display: flex;
+    flex-direction: column; /* Vendos elementet një mbi tjetrin */
+    align-items: center; /* Centron vertikalisht */
+    justify-content: center; /* Centron horizontalisht */
+    padding: 10px; /* Hapësirë rreth përmbajtjes */
+    width: 100%; /* Merr gjerësinë e plotë të prindit */
+    height: auto; /* Lartësi dinamike bazuar në përmbajtjen */
+}
+
+#surveyChart {
+    width: 250px;
+    height: 250px;
+    transition: none;
+    animation: none;
+    margin-bottom: 20px; /* Hapësirë midis grafikut dhe tekstit */
+    position: relative;
+    right: 150px;
+}
+
+#Tc {
+    font-size: 1.6em; /* Madhësi e balancuar e tekstit */
+    line-height: 1.5; /* Hapësirë midis rreshtave për lexueshmëri */
+    padding: 0 20px; /* Hapësirë në anët */
+    max-width: 600px; /* Kufizo shtrirjen e tekstit */
+    text-align: center; /* Qendër për tekstin */
+    margin: 0 auto; /* Pozicionim në qendër horizontalisht */
+    position: relative;
+    right: 150px;
+    bottom: 370px;
+}
+
+
+
+    /* Theksimi i pjesës së fjalës "TheBPlace" */
+    .highlight {
+        font-size: 1.6em; /* Madhësia e fontit për pjesën e theksuar */
+    }
+    
+}
 
 
 
@@ -644,3 +708,4 @@ document.addEventListener("DOMContentLoaded", function () {
    
 </body>
 </html>
+
