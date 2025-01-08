@@ -482,6 +482,74 @@ color:white;
 }
 
 
+@media (max-width: 769px){
+    
+    body, html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden; /* Shmang lëvizjen horizontale */
+        margin: 0;
+        padding: 0;
+        
+    }
+    .navigation{
+        display: none;
+    }
+.logo{
+
+    position: relative;
+    right: 50px;
+}
+
+.service-card{
+    width: 300px;
+}
+
+
+.charti {
+    display: flex;
+    flex-direction: column; /* Vendos elementet një mbi tjetrin */
+    align-items: center; /* Centron vertikalisht */
+    justify-content: center; /* Centron horizontalisht */
+    padding: 10px; /* Hapësirë rreth përmbajtjes */
+    width: 100%; /* Merr gjerësinë e plotë të prindit */
+    height: auto; /* Lartësi dinamike bazuar në përmbajtjen */
+    margin-left: -90px; /* Shtyrje në të majtë për të lëvizur të gjithë blokun */
+    margin-top: 300px;
+}
+
+#surveyChart {
+    width: 350px;
+    height: 350px;
+    margin-top: 100px; /* Hapësirë më e madhe në krye për ta shtyrë grafikun më poshtë */
+    margin-bottom: 20px; /* Hapësirë midis grafikut dhe tekstit */
+    transition: none;
+    animation: none;
+}
+
+#Tc {
+    font-size: 1.6em; /* Madhësi e balancuar e tekstit */
+    line-height: 1.5; /* Hapësirë midis rreshtave për lexueshmëri */
+    padding: 0 20px; /* Hapësirë në anët */
+    max-width: 600px; /* Kufizo shtrirjen e tekstit */
+    text-align: center; /* Qendër për tekstin */
+    margin: 0 auto; /* Pozicionim në qendër horizontalisht */
+    /* Heqim 'position', 'right', dhe 'bottom' për pozicionim të drejtpërdrejtë */
+}
+
+
+
+    /* Theksimi i pjesës së fjalës "TheBPlace" */
+    .highlight {
+        font-size: 1.6em; /* Madhësia e fontit për pjesën e theksuar */
+    }
+    
+}
+
+
+}
+
+
 
 
     
@@ -712,4 +780,3 @@ document.addEventListener("DOMContentLoaded", function () {
    
 </body>
 </html>
-
