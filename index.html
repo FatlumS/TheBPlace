@@ -12,9 +12,20 @@
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-<link rel="stylesheet" href="footer.css">
-    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+<link rel="stylesheet" href="footer2.css">
+<link rel="icon" href="favicon.jpg" type="image/jpeg">
+
+
     <style>
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #6CABDD;
+
+
+  }
+        
         /* General Reset */
         * {
             margin: 0;
@@ -28,7 +39,7 @@
             display: flex;
             align-items: center;
             padding: 10px 20px;
-            background: linear-gradient(to right, #000000,darkblue);
+            background-color: #6CABDD;;
             color: white;
             position: fixed;
             top: 0;
@@ -36,6 +47,17 @@
             width: 100%;
             z-index: 1000;
         }
+        .tekst2 span:first-child {
+    color: blue;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Add Poppins font */
+}
+.tekst2 span:last-child {
+    color: blue;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Add Poppins font */
+}
+
 
         .logo {
             padding-left: 40px;
@@ -45,6 +67,18 @@
             user-select: none;
             margin-right: auto;
         }
+        .logo span:first-child {
+    color: blue;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Add Poppins font */
+}
+
+.logo span:last-child {
+    color: blue;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Add Poppins font */
+}
+
 
         .navigation {
             display: flex;
@@ -65,19 +99,22 @@
             gap: 15px;
         }
 
-        .waitlist {
-            padding: 8px 16px;
+        .waitlist,.login-button {
+            height: 40px;
+            width:100px;
             font-size: 1em;
             border: none;
-            border-radius: 5px;
+            border-radius: 20px;
             cursor: pointer;
             background-color: black;
             color: white;
             transition: background-color 0.2s ease;
         }
 
-        .waitlist:hover {
-            background-color: rgb(18, 16, 16);
+      
+
+        .waitlist:hover , .login-button:hover {
+            background-color: darkblue;
         }
 
         /* Main Text Section */
@@ -117,69 +154,135 @@
     transition: opacity 4s ease-in-out, transform 4s ease-in-out; /* Apply transition */
   
 }
+/* Services Section - 2x2 Grid with Larger Cards */
+.services-section {
+    padding: 80px 20px;
+    background-color: transparent;
+}
 
-        /* Services Section */
-     /* Initially hide the services container */
 .services-container {
-    opacity: 0;
-    transform: translateY(50px); /* Start slightly below */
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Apply transition */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 40px;
 }
-
-/* Apply animation when the class is added */
-.animate-in {
-    opacity: 1;
-    transform: translateY(0); /* Final position */
-}
-
 
 .service-card {
-    width: 30%; /* Make each card take up 30% of the container width for 3 cards in a row */
-    margin: 20px 0; /* Adjusted margin for spacing */
-    padding: 3rem 30px; /* Increased padding for bigger cards */
-    text-align: center;
-    border-radius: 10px;
-    border-width: 30px;
+    perspective: 1000px;
+    height: 100%;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 380px; /* Increased height */
+    padding: 50px 40px; /* Increased padding */
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    overflow: hidden;
+}
+
+.service-card:hover .card-inner {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.icon-container {
+    width: 80px; /* Larger icon */
+    height: 80px; /* Larger icon */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px; /* Larger icon */
+    color: white;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover .icon-container {
+    transform: translateY(-8px) rotate(5deg);
+    box-shadow: 0 12px 25px rgba(79, 70, 229, 0.3);
+}
+
+.card-content h3 {
+    font-size: 24px; /* Larger text */
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    transition: width 0.4s ease;
+}
+
+.service-card:hover h3::after {
+    width: 80px;
+}
+
+.card-content p {
+    font-size: 17px; /* Slightly larger text */
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 17px; /* Larger text */
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.card-link i {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-link {
+    color: #a78bfa;
+}
+
+.service-card:hover .card-link i {
+    transform: translateX(5px);
+}
+
+/* Responsive - Stack to 1 column on mobile */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
     
-    background-color:black;
-    color:orangered;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    font-size: 1.2em;
+    .card-inner {
+        min-height: 350px;
+        padding: 40px 30px;
+    }
 }
-
-.service-card:hover {
-    box-shadow: 0 0 20px orange;
-    transform: scale(1.1); /* Slightly bigger on hover */
-}
-
-/* Adjust specific cards to ensure even spacing in second row */
-.services-container > .service-card:nth-child(5),
-.services-container > .service-card:nth-child(4) {
-    width: ; /* Make the second-row cards slightly wider */
-    margin-left: 0; /* Remove left margin to ensure even spacing */
-    margin-right: 0; /* Ensure no extra space on the right */
-}
-
-
-
-
-
-        .icon-container {
-            font-size: 3rem;
-            color: white;
-            margin-bottom: 15px;
-        }
-
-        /* Responsive Adjustments */
-       
-
        /* Initially hide the container */
 .container {
     opacity: 0;
@@ -294,6 +397,7 @@ color:white;
     position: relative;
     bottom: 460px;
     color: white;
+   
     font-size: 1.9em;
     right: 40px;
     text-align: center; /* Uncomment this to center the text */
@@ -309,7 +413,9 @@ color:white;
     
 
     .highlight {
-    color: #0205D3;
+        color: blue;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Add Poppins font */
 }
 
 
@@ -351,7 +457,261 @@ color:white;
     width: 100%;
 }
 
-@media (max-width: 480px){
+/* Premium Pitch Deck Download Component */
+.pitch-download {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pitch-download::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  z-index: 0;
+}
+
+.download-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%);
+  border-radius: 24px;
+  padding: 60px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0,0,0,0.15),
+    0 0 0 1px rgba(255,255,255,0.3) inset;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.download-card:hover {
+  transform: translateY(-10px) rotateX(3deg);
+  box-shadow: 
+    0 35px 60px -15px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(255,255,255,0.4) inset;
+}
+
+.download-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(44,62,80,0.3) 0%, transparent 50%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.download-card:hover::before {
+  opacity: 1;
+  animation: borderPulse 6s infinite linear;
+}
+
+@keyframes borderPulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.3; }
+}
+
+.card-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  border-radius: 22px;
+  box-shadow: 
+    0 10px 20px rgba(45,55,72,0.2),
+    0 0 0 1px rgba(255,255,255,0.1) inset;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-icon svg {
+  width: 36px;
+  height: 36px;
+  color: white;
+  transition: transform 0.6s ease;
+}
+
+.download-card:hover .card-icon {
+  transform: translateY(-8px) rotate(-5deg);
+  box-shadow: 
+    0 15px 30px rgba(45,55,72,0.3),
+    0 0 0 1px rgba(255,255,255,0.2) inset;
+}
+
+.download-card:hover .card-icon svg {
+  transform: scale(1.1);
+}
+
+.download-card h3 {
+  color: #1a202c;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.download-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4a90e2 0%, #6CABDD 100%);
+  transition: width 0.6s ease;
+}
+
+.download-card:hover h3::after {
+  width: 100px;
+}
+
+.download-card p {
+  color: #4a5568;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: color 0.3s ease;
+}
+
+.download-card:hover p {
+  color: #2d3748;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 16px 40px;
+  border-radius: 12px;
+  text-decoration: none;
+  margin: 0 auto;
+  box-shadow: 
+    0 5px 15px rgba(45,55,72,0.3),
+    0 0 0 1px rgba(255,255,255,0.1) inset;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255,255,255,0.1) 0%,
+    rgba(255,255,255,0) 60%
+  );
+  transform: rotate(30deg);
+  transition: transform 0.6s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 25px rgba(45,55,72,0.4),
+    0 0 0 1px rgba(255,255,255,0.2) inset;
+}
+
+.download-btn:hover::before {
+  transform: rotate(30deg) translate(10%, 10%);
+}
+
+/* Floating particles background */
+.download-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(108,171,221,0.1) 0%, transparent 25%),
+    radial-gradient(circle at 80% 70%, rgba(108,171,221,0.1) 0%, transparent 25%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.download-card:hover::after {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .download-card {
+    padding: 40px 30px;
+  }
+  
+  .card-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .download-card h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-card {
+    padding: 40px 25px;
+    border-radius: 20px;
+  }
+  
+  .download-btn {
+    padding: 14px 30px;
+  }
+}
+@media screen and (max-width: 360px) {
+    .logo {
+        position: relative;
+        right: 20px; /* Rregullo pozicionin për pajisje më të ngushta */
+    }
+
+    .TekstiNeMes {
+        font-size: 1.2em; /* Përshtat madhësinë për pajisje më të vogla */
+    }
+
+    .service-card {
+        flex: 1 1 100%; /* Shtrij kartën në gjerësi të plotë */
+    }
+}
+
+@media screen and (min-width:320px) and (max-width: 480px) {
 
     body, html {
         width: 100%;
@@ -371,7 +731,7 @@ color:white;
 }
 
 .TekstiNeMes {
-    font-size: 1.6em;
+    font-size: 1.6em;z
     position: relative;
     right: 40px;
     text-align: center; /* Teksti në qendër */
@@ -408,7 +768,7 @@ color:white;
 }
 
 .service-card p {
-    font-size: 1.0em !important; /* Madhësia e tekstit më e vogël dhe e detyrueshme */
+    font-size: 0.7em !important; /* Madhësia e tekstit më e vogël dhe e detyrueshme */
     margin-bottom: 5px;
     color: #333; /* Mund të shtoni ngjyrë nëse është e nevojshme */
 }
@@ -482,73 +842,67 @@ color:white;
     
 }
 
-
-@media (max-width: 769px){
-    
+@media screen and (min-width: 481px) and (max-width: 769px) {
     body, html {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden; /* Shmang lëvizjen horizontale */
         margin: 0;
         padding: 0;
-        
     }
-    .navigation{
+
+    .navigation {
         display: none;
     }
-.logo{
 
-    position: relative;
-    right: 50px;
-}
+    .logo {
+        position: relative;
+        right: 50px;
+    }
 
-.service-card{
-    width: 300px;
-}
+    .service-card {
+        width: 300px;
+    }
 
+    .charti {
+        display: flex;
+        flex-direction: column; /* Vendos elementet një mbi tjetrin */
+        align-items: center; /* Centron vertikalisht */
+        justify-content: center; /* Centron horizontalisht */
+        padding: 10px; /* Hapësirë rreth përmbajtjes */
+        width: 100%; /* Merr gjerësinë e plotë të prindit */
+        height: auto; /* Lartësi dinamike bazuar në përmbajtjen */
+        margin-left: -90px; /* Shtyrje në të majtë për të lëvizur të gjithë blokun */
+        margin-top: 300px;
+    }
 
-.charti {
-    display: flex;
-    flex-direction: column; /* Vendos elementet një mbi tjetrin */
-    align-items: center; /* Centron vertikalisht */
-    justify-content: center; /* Centron horizontalisht */
-    padding: 10px; /* Hapësirë rreth përmbajtjes */
-    width: 100%; /* Merr gjerësinë e plotë të prindit */
-    height: auto; /* Lartësi dinamike bazuar në përmbajtjen */
-    margin-left: -90px; /* Shtyrje në të majtë për të lëvizur të gjithë blokun */
-    margin-top: 300px;
-}
+    #surveyChart {
+        width: 350px;
+        height: 350px;
+        margin-top: 100px; /* Hapësirë më e madhe në krye për ta shtyrë grafikun më poshtë */
+        margin-bottom: 20px; /* Hapësirë midis grafikut dhe tekstit */
+        transition: none;
+        animation: none;
+    }
 
-#surveyChart {
-    width: 350px;
-    height: 350px;
-    margin-top: 100px; /* Hapësirë më e madhe në krye për ta shtyrë grafikun më poshtë */
-    margin-bottom: 20px; /* Hapësirë midis grafikut dhe tekstit */
-    transition: none;
-    animation: none;
-}
-
-#Tc {
-    font-size: 1.6em; /* Madhësi e balancuar e tekstit */
-    line-height: 1.5; /* Hapësirë midis rreshtave për lexueshmëri */
-    padding: 0 20px; /* Hapësirë në anët */
-    max-width: 600px; /* Kufizo shtrirjen e tekstit */
-    text-align: center; /* Qendër për tekstin */
-    margin: 0 auto; /* Pozicionim në qendër horizontalisht */
-    /* Heqim 'position', 'right', dhe 'bottom' për pozicionim të drejtpërdrejtë */
-}
-
-
+    #Tc {
+        font-size: 1.6em; /* Madhësi e balancuar e tekstit */
+        line-height: 1.5; /* Hapësirë midis rreshtave për lexueshmëri */
+        padding: 0 20px; /* Hapësirë në anët */
+        max-width: 600px; /* Kufizo shtrirjen e tekstit */
+        text-align: center; /* Qendër për tekstin */
+        margin: 0 auto; /* Pozicionim në qendër horizontalisht */
+    }
 
     /* Theksimi i pjesës së fjalës "TheBPlace" */
     .highlight {
         font-size: 1.6em; /* Madhësia e fontit për pjesën e theksuar */
     }
-    
 }
 
 
-@media (max-width: 1024px) { 
+
+@media screen and (max-width: 1024px) { 
     .service-card{
     width: 300px;
 }
@@ -600,24 +954,23 @@ color:white;
     
     </style>
 </head>
-<body style="background-color: black;">
+<body>
     <!-- Header Section -->
-    <header>
-        <a href="#" class="logo" style=" text-decoration: none;">
-            <span style="color: blue;">The</span><span style="color: white;">BPlace</span>
-          </a>
-          
-        <nav class="navigation">
-            <!-- <a href="index2.html" id="contact">Contact</a> -->
-            <a href="AboutUs.html" id="About">About Us</a>
-            <div class="button-container">
-                <!-- <button class="login-button" onclick="openLoginPopup()">Sign Up</button> -->
-                <button onclick="location.href='Waitlist.html'" class="waitlist">Join Waitlist</button>
-            </div>
+   <header>
+    <a href="#" class="logo" style="text-decoration: none;">
+      <span style="color: blue;">The</span><span style="color: blue;">BPlace</span>
+    </a>
 
-            
-        </nav>
-    </header>
+
+    <nav class="navigation" id="navigation">
+      <a href="AboutUs.html" id="About">About Us</a>
+      <div class="button-container">
+        <!-- <button onclick="location.href='choose.html'" class="login-button">Sign Up</button>
+        <button onclick="location.href='login.php'" class="waitlist">Login</button> -->
+      </div>
+    </nav>
+  </header>
+
 
     <!-- Main Text Section -->
     <div class="TekstiNeMes">
@@ -629,45 +982,66 @@ color:white;
     <div class="our">
         <h1 style="text-align: center; color: rgb(255, 255, 255); margin-top: 330px;  font-size: 3em;">Our Services</h1>
       </div>
-      
-      
-    <div class="services-container">
-        <div class="service-card">
-            <div class="icon-container"><i class="fas fa-shopping-cart"></i></div>
-            <h3>Marketplace Functionality</h3>
-            <p style="color: white; margin-top: 20px; font-size: 1.2em; font-weight: bold;">Buy and sell a wide variety of products easily and securely through our platform, unlocking new opportunities for growth</p>
-        </div>
-        <div class="service-card">
-            <div class="icon-container"><i class="fas fa-calendar-alt"></i></div>
-            <h3>Booking Capabilities</h3>
-            <p style="color: white; margin-top: 20px; font-size: 1.2em; font-weight: bold;">Easily book services and places through our platform, streamlining your reservation process for convenience and efficiency.</p>
-        </div>
-        <div class="service-card">
-            <div class="icon-container"><i class="fas fa-briefcase"></i></div>
-            <h3>Job Postings</h3>
-            <p style="color: white; margin-top: 20px; font-size: 1.2em; font-weight: bold;">Post job opportunities and get hired, connecting businesses with talent and helping job seekers find their next career move.</p>
-        </div>
-        <div class="service-card">
-            <div class="icon-container"><i class="fas fa-globe"></i></div>
-            <h3>Collaboration Hub</h3>
-            <p style="color: white; margin-top: 20px; font-size: 1.2em; font-weight: bold;"> Join together in one central location, where businesses and individuals can connect, collaborate, and grow.</p>
-        </div>
-        <div class="service-card">
-            <div class="icon-container"><i class="fas fa-cogs"></i></div>
-            <h3>Freelancers & Contractors</h3>
-            <p style="color: white; margin-top: 20px; font-size: 1.2em; font-weight: bold;">Hire freelancers or become one, offering opportunities to work independently or find the right talent for your business.</p>
+      <div class="services-section">
+        <div class="services-container">
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon-container" style="--hue: 0">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Marketplace</h3>
+                        <p>Buy and sell products easily through our secure platform, unlocking new opportunities for growth.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon-container" style="--hue: 90">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Bookings</h3>
+                        <p>Streamline your reservation process with our convenient booking system.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon-container" style="--hue: 180">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Careers</h3>
+                        <p>Connect businesses with talent and help job seekers find their next career move.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="card-inner">
+                    <div class="icon-container" style="--hue: 270">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Collaboration</h3>
+                        <p>Connect, collaborate, and grow in our central business hub.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
     <div class="container">
 
 
         <div class="centered-div"><h1 id="tekst">Join the future of online
             </h1>
             
-            <h1 id="tekst2"> business in <span style="color: #0205D3;">The</span><span style="color: white;">BPlace</span></h1>
+            <h1 id="tekst2"> business in <span style="color: #0205D3;">The</span><span style="color: blue;">BPlace</span></h1>
         
-            <button id="butoni" class="login-button" onclick="window.location.href='Waitlist.html'">Join Waitlist</button>
+            <button id="butoni"  onclick="window.location.href='choose.html'">Join us</button>
 
     
     </div> 
@@ -675,44 +1049,47 @@ color:white;
 
             
     </div>
-
-    <div class="charti"><canvas id="surveyChart" width="500" height="500"></canvas> <!-- Increased dimensions -->
-    
-        <h2 id="Tc">We asked 250 businesses if <span class="highlight"> The</span>BPlace would be easier than using multiple platforms</h2>
-
+    <div class="pitch-download">
+        <div class="download-card">
+            <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+            </div>
+            <h3>TheBPlace Pitch Deck</h3>
+            <p>Download our investor presentation</p>
+            <a href="TheBPlace-PitchDeck.pptx" download class="download-btn">Download PDF</a>
+        </div>
     </div>
+    
 
     <footer>
       <div class="content">
         <div class="top">
           <div class="logo-details">
             <!-- <i class="fab fa-slack"></i> -->
-            <span class="logo_name"> <span style="color: #0205D3;">The</span>BPlace</span>
+            <span class="logo_name"> <span style="color: blue;
+                font-weight: bold;
+                font-family: 'Poppins', sans-serif; /* Add Poppins font */">The</span><span style="color: blue;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Add Poppins font */">BPlace</span></span>
           </div>
-          <!-- <div class="media-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div> -->
+    
         </div>
         <div class="link-boxes">
           <ul class="box">
             <li class="link_name">Company</li>
             <li><a href="#">Home</a></li>
-            <!-- <li><a href="index2.html">Contact us</a></li> -->
+          
             <li><a href="AboutUs.html">About us</a></li>
             <li><a href="Waitlist.html">Get started</a></li>
           </ul>
       
          
          
-          <!-- <ul class="box input-box">
-            <li class="link_name">Subscribe</li>
-            <li><input type="text" placeholder="Enter your email"></li>
-            <li><input type="button" value="Subscribe"></li> -->
-          <!-- </ul> -->
+          
         </div>
       </div>
       <div class="bottom-details">
@@ -797,27 +1174,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<!-- <div id="loginPopup" class="popup">
-    <div class="popup-content">
-        <span class="close-button" onclick="closeLoginPopup()">&times;</span>
-        <h2>Create an account</h2>
-        <div class="butonatNePopup1">
-            <button onclick="location.href='signup-PA.html'">Personal account</button>
-            <button class="business-button" onclick="openBusinessPopup()">Business account</button>
-        </div>
-    </div>
-</div> -->
 
-<!-- <div id="businessPopup" class="popup-business">
-    <div class="popup-business-content">
-        <span class="close-business-button" onclick="closeBusinessPopup()">&times;</span>
-        <h2>Business Account</h2>
-        <div class="butonatNePopupBusiness">
-            <button onclick="location.href='signup-SB.html'" >Service business Account</button>
-            <button onclick="location.href='signup-MB.html'" >Manufacturing business Account</button>
-        </div>
-    </div>
-</div> -->
   
 
 
