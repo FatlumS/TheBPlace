@@ -17,15 +17,26 @@
         }
 
         body {
-           background-color: black;
+            background: linear-gradient(to bottom, #0A0A2A, #000000);
             color: white;
         }
+        .logo span:first-child {
+    color: blue;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Add Poppins font */
+}
+
+.logo span:last-child {
+    color: blue;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Add Poppins font */
+}
 
         header {
             display: flex;
             align-items: center;
             padding: 10px 20px;
-            background-color: black;
+            background-color: transparent;
             color: white;
             position: fixed;
             top: 0;
@@ -93,16 +104,7 @@
             margin-top: 50px;
         }
 
-        .footer p {
-           display: flex;
-           justify-content: center;
-
-            color: white;
-            font-size: 0.9em;
-            margin-top: 100px;
-            font-size: 14px; /* Adjust as needed */
-        }
-
+       
         @media (max-width: 480px){
             body, html {
         width: 100%;
@@ -141,7 +143,7 @@ right: 50px;
     
         }
 
-         @media (max-width: 1024px){
+        @media (max-width: 1024px){
 
             .logo{
 
@@ -158,8 +160,8 @@ right: 50px;
 <body>
     
     <header>
-        <a href="index.html" class="logo" style=" text-decoration: none;">
-            <span style="color: blue;">The</span><span style="color: white;">BPlace</span>
+        <a href="LandingPage.html" class="logo" style=" text-decoration: none;">
+            <span style="color: blue;">The</span><span style="color: blue;">BPlace</span>
           </a>
     </header>
 
@@ -186,9 +188,7 @@ right: 50px;
             At TheBPlace, we help you build a powerful online presence to showcase your business. Create your unique space where customers can discover what you offer and engage directly with your business. Our mission is to simplify business management by bringing everything businesses need into one platform. We replace the multiple tools businesses currently rely on by offering features such as marketing, hiring, product listings, and secure payments. With TheBPlace, businesses can focus on growth and efficiency, unlocking new opportunities without switching between platforms. Our vision is to become the mini Google for businesses, empowering success through smarter and easier business management.        </p>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2024 <span style="color: #0205D3;">The</span>BPlace. All rights reserved.</p>
-    </div>
+
 
 </body>
 </html>
